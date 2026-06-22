@@ -8,7 +8,7 @@
     <string name="hint_server_url">Server URL</string>
     <string name="hint_room_id">Room ID</string>
     <string name="hint_user_name">Your Name</string>
-    <string name="default_server_url">http://192.168.1.7:5000</string>
+    <string name="default_server_url">https://qa.qratm.in</string>
     <string name="btn_join_room">Join Room</string>
     <string name="note_server_url">Default URL is for Android Emulator.\nChange to your server IP for real devices.</string>
 
