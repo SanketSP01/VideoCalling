@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Video Call</string>
+
+    <!-- Join Room Screen -->
+    <string name="title_join_room">Video Call</string>
+    <string name="subtitle_join_room">Join or create a room to start a video call</string>
+    <string name="hint_server_url">Server URL</string>
+    <string name="hint_room_id">Room ID</string>
+    <string name="hint_user_name">Your Name</string>
+    <string name="default_server_url">http://192.168.1.7:5000</string>
+    <string name="btn_join_room">Join Room</string>
+    <string name="note_server_url">Default URL is for Android Emulator.\nChange to your server IP for real devices.</string>
+
+    <!-- Validation Messages -->
+    <string name="error_empty_server_url">Please enter a server URL</string>
+    <string name="error_empty_room_id">Please enter a room ID</string>
+    <string name="error_empty_user_name">Please enter your name</string>
+
+    <!-- Video Call Screen -->
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_waiting">Waiting for others to join…</string>
+    <string name="status_in_call">In Call</string>
+    <string name="status_reconnecting">Reconnecting…</string>
+    <string name="status_room_full">Room is full</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_toggle_audio">Toggle Microphone</string>
+    <string name="cd_toggle_video">Toggle Camera</string>
+    <string name="cd_end_call">End Call</string>
+    <string name="cd_switch_camera">Switch Camera</string>
+    <string name="cd_local_video">Your Video</string>
+    <string name="cd_remote_video">Remote Video</string>
+
+    <!-- Toast / Error Messages -->
+    <string name="error_connection_failed">Connection failed: %1$s</string>
+    <string name="error_permission_denied">Camera and microphone permissions are required for video calls</string>
+    <string name="msg_call_ended">Call ended</string>
+    <string name="msg_user_joined">%1$s joined the call</string>
+    <string name="msg_user_left">%1$s left the call</string>
+    <string name="msg_room_full">This room is already full</string>
+</resources>

@@ -1,0 +1,15 @@
+# Ignore log files
+*.txt
+
+# Android ignores
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+
+# Backend ignores
+bin/
+obj/
+*.user
+.vs/
