@@ -55,9 +55,7 @@ public class SignalRClient {
         String hubUrl = serverUrl.endsWith("/") ? serverUrl + "videocallhub" : serverUrl + "/videocallhub";
 
         hubConnection = HubConnectionBuilder.create(hubUrl)
-                .withTransport(TransportEnum.WEBSOCKETS)
                 .withHandshakeResponseTimeout(30 * 1000)
-                .shouldSkipNegotiate(true)
                 .build();
 
         registerEventHandlers();
