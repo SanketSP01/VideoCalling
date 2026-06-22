@@ -1,36 +1,33 @@
-# VideoCallSystem
+# VideoCalling
 
-This project consists of an Android application (`AndroidClient`) and a .NET backend signaling server (`Backend`).
+A comprehensive video calling solution featuring an Android client and a .NET backend signaling server. This application facilitates real-time video communication between clients using WebRTC and ASP.NET Core SignalR.
+
+## Features
+
+- **Real-Time Video Calling**: Low-latency video and audio communication powered by WebRTC.
+- **Signaling Server**: ASP.NET Core SignalR backend for efficient connection negotiation between peers.
+- **Android App**: Native Android client offering a clean and responsive user interface for making and receiving calls.
+- **Room Management**: Support for creating and joining specific video calling rooms.
 
 ## Structure
 
-- **AndroidClient**: Contains the Android mobile app source code built using Gradle.
-- **Backend/VideoCallSignaling**: Contains the ASP.NET Core project used for WebRTC signaling.
-- **Logs**: Included are device logs which have been analyzed for crashes.
+- **AndroidClient**: Contains the native Android mobile app source code built using Gradle.
+- **Backend/VideoCallSignaling**: Contains the ASP.NET Core C# project that acts as the WebRTC signaling server.
 
-## Known Issues
+## Getting Started
 
-Based on the analysis of the device logs, the Android application (`com.india.Phoenix`) occasionally experiences the following crashes:
+### Backend Server
+1. Open `Backend/VideoCallSignaling/VideoCallSignaling.csproj` in Visual Studio or your preferred IDE.
+2. Restore the required NuGet packages.
+3. Run the project to start the signaling server locally.
 
-1. **MainActivity ClassNotFoundException**:
-   The app fails to launch because the `MainActivity` class is missing from the compiled DEX path.
-   ```
-   java.lang.RuntimeException: Unable to instantiate activity ComponentInfo{com.india.Phoenix/com.agatsa.sanketlife.MainActivity}: java.lang.ClassNotFoundException: Didn't find class "com.agatsa.sanketlife.MainActivity"
-   ```
-
-2. **SettingsFragment InstantiationException**:
-   The `SettingsFragment` is missing an empty public constructor, causing a crash when the system tries to recreate the fragment.
-   ```
-   androidx.fragment.app.Fragment$InstantiationException: Unable to instantiate fragment com.india.Phoenix.activity.updates.fragments.SettingsFragment: could not find Fragment constructor
-   ```
-
-3. **LogoMain Activity NullPointerException**:
-   The app crashes during the `onPause()` lifecycle of the `logo_main` activity while trying to move tasks.
-   ```
-   java.lang.NullPointerException: Attempt to invoke virtual method 'android.content.ComponentName android.content.Intent.getComponent()' on a null object reference
-   ```
+### Android Client
+1. Open the `AndroidClient` directory in Android Studio.
+2. Sync the project with the Gradle files.
+3. Update the signaling server URL in the app's networking configuration to point to your running backend.
+4. Build and run the app on an Android emulator or a physical device.
 
 ## Development
 
-- **Android**: Open the `AndroidClient` directory in Android Studio.
-- **Backend**: Open `Backend/VideoCallSignaling/VideoCallSignaling.csproj` in Visual Studio.
+- **Android**: Requires Android Studio and the Android SDK.
+- **Backend**: Requires Visual Studio, JetBrains Rider, or the .NET SDK.
